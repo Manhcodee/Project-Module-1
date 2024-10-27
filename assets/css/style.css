@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+root {
+    --color-background: #0d1969;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+}
+
+.header_bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #0d1969;
+}
+
+.icon_bars {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bars_text {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.text_user {
+    color: #fff;
+    margin: 0 5px;
+}
+
+.icon_user {
+    color: #fff;
+}
+
+.header_search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.header_search-left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    position: relative;
+}
+
+.angle > i {
+    font-size: 25px;
+    color: var(--color-background);
+    margin-right: 10px;
+}
+
+.angle > span {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-background);
+}
+
+.icon-left {
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.icon_button {
+    padding: 15px 20px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    color: #656565;
+}
+
+.add_student {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 98%;
+    background: #0d1969;
+    height: 40px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.add_student > label > input {
+    height: 30px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.add_student > button {
+    background: #02f613;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.header_search-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+#select_search {
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #b7b7b7;
+    outline: none;
+}
+.search_icon {
+    position: relative;
+}
+
+#search_input {
+    text-align: center;
+    font-size: 16px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #b7b7b7;
+}
+
+.icon_search {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container {
+    width: 98%;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 80px;
+    position: absolute;
+    top: 220px;
+    z-index: 10;
+    left: 20px;
+}
+
+.container_box {
+    width: 90%;
+    height: 90%;
+    margin: 20px auto;
+}
+
+tr {
+    padding: 10px;
+}
+
+th {
+    background: #0d1969;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    width: 200px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(old) {
+    background: #ffffff;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+span > .btn {
+    width: 50px;
+    height: 30px;
+    background: #2da1ee;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+span > .btn_del {
+    background: #f51537;
+}
+
+footer {
+    width: 98%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.btn_footer {
+    font-size: 18px;
+    padding: 10px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    color: #fff;
+    background: #0d1969;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn_footer:hover {
+    opacity: 0.8;
+}
+
+.icon_user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<main>
+    <header class="header">
+        <div class="header_bars">
+            <div class="icon_bars">
+                <i class="fa-solid fa-bars icon-bars"></i>
+            </div>
+            <div class="bars_text">Quản lý danh sách học sinh, sinh viên</div>
+            <div class="icon_user">
+                <div class="img-user">
+                    <img src="https://aquariumcare.vn/upload/user/images/ch%E1%BB%A5p%20%E1%BA%A3nh%20ch%C3%B3%20m%C3%A8o%20%C4%91%E1%BA%B9p%20v%C3%A0%20%C4%91%C3%A1ng%20y%C3%AAu%201.jpg" alt="user">
+                </div>
+                <span class="text_user">Manh</span>
+                <i class="fa-solid fa-caret-down icon-user"></i>
+            </div>
+        </div>
+        <div class="header_search">
+            <div class="header_search-left">
+                <div class="angle">
+                    <i class="fa-solid fa-angle-right"></i>
+                    <span class="supertext">Danh sách học sinh</span>
+                </div>
+                <div class="icon-left">
+                    <button class="icon_button"><i class="fa-solid fa-square-plus"></i></button>
+                    <button class="icon_button"><i class="fa-solid fa-retweet"></i></button>
+                    <button class="icon_button" ><i class="fa-solid fa-arrows-spin"></i></button>
+
+                </div>
+            </div>
+            <div class="header_search-right">
+                <select id="select_search"  >
+                    <option value="name">Tên</option>
+                    <option value="id">Id</option>
+                    <option value="class">Lớp</option>
+                </select>
+                <div class="search_icon">
+                    <input id="search_input" type="text" placeholder="Tìm kiếm...">
+                    <span class="icon_search" onclick="searchStudent()"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="add_student">
+        <label><input type="text" id="id" placeholder="id"/></label>
+        <label><input type="text" id="name" placeholder="họ và tên"/></label>
+        <label><input type="text" id="date" placeholder="ngày sinh"/></label>
+        <label><input type="text" id="gender" placeholder="giới tính"/></label>
+        <label><input type="text" id="address" placeholder="địa chỉ"/></label>
+        <label><input type="text" id="email" placeholder="email"/></label>
+        <label><input type="text" id="class" placeholder="lớp"/></label>
+        <label><input type="text" id="course" placeholder="khóa học" /></label>
+        <button onclick="addStudent()" id="addBtn" class="btn">Thêm</button>
+        <button onclick="saveStudent()" id="saveBtn" class="btn" style="display: none;">Lưu</button>
+    </div>
+    <section class="container">
+        <div class="container_box">
+            <table id="students-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Họ Tên</th>
+                        <th>Lớp</th>
+                        <th>Ngày Sinh</th>
+                        <th>Giới Tính</th>
+                        <th>Địa Chỉ</th>
+                        <th>Email</th>
+                        <th>Khóa Học</th>
+                        <th>Tùy Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <button class="btn_footer">1</button>
+
+        </footer>
+    </section>
+</main>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
