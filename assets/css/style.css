@@ -125,6 +125,7 @@ header {
     border-radius: 5px;
     width: 100px;
     cursor: pointer;
+    height: 40px;
 }
 
 .header_search-right {
@@ -171,12 +172,15 @@ header {
     background: #fff;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-top: 80px;
     position: absolute;
     top: 220px;
     z-index: 10;
     left: 20px;
+    transition: margin-top 0.5s ease;
+
+
 }
+
 
 .container_box {
     width: 90%;
@@ -209,7 +213,7 @@ tr:nth-child(even) {
     background: #f2f2f2;
 }
 
-span > .btn {
+.btn {
     width: 50px;
     height: 30px;
     background: #2da1ee;
@@ -223,7 +227,7 @@ span > .btn {
     opacity: 0.8;
 }
 
-span > .btn_del {
+.btn_del {
     background: #f51537;
 }
 
@@ -270,4 +274,26 @@ img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+#city, #district, #gender {
+    width: 200px;
+    height: 30px;
+    outline: none;
+    text-align: center;
+}
+
+.pagination-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page-button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.page-button.active {
+    font-weight: bold;
 }

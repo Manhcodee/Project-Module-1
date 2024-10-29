@@ -29,7 +29,7 @@
                     <span class="supertext">Danh sách học sinh</span>
                 </div>
                 <div class="icon-left">
-                    <button class="icon_button"><i class="fa-solid fa-square-plus"></i></button>
+                    <button class="icon_button" onclick="Toggle()"><i class="fa-solid fa-square-plus"></i></button>
                     <button class="icon_button"><i class="fa-solid fa-retweet"></i></button>
                     <button class="icon_button" ><i class="fa-solid fa-arrows-spin"></i></button>
 
@@ -49,18 +49,43 @@
             </div>
         </div>
     </header>
+
     <div class="add_student">
-        <label><input type="text" id="id" placeholder="id"/></label>
+<!--    <label><input type="text" id="id" placeholder="id"/></label>-->
         <label><input type="text" id="name" placeholder="họ và tên"/></label>
-        <label><input type="text" id="date" placeholder="ngày sinh"/></label>
-        <label><input type="text" id="gender" placeholder="giới tính"/></label>
-        <label><input type="text" id="address" placeholder="địa chỉ"/></label>
+        <label><input type="date" id="date" name="date" placeholder="ngày sinh"/></label>
+
+        <!-- Thay đổi trường Giới Tính thành kiểu chọn -->
+        <label>
+            <select id="gender">
+                <option value="">Chọn giới tính</option>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+                <option value="Khác">Khác</option>
+            </select>
+        </label>
+
+        <!-- Thay đổi trường Địa Chỉ thành kiểu chọn Thành Phố và Huyện -->
+        <label>
+            <select id="city" onchange="updateDistrictOptions()">
+                <option value="">Chọn thành phố</option>
+                <option value="Hanoi">Hà Nội</option>
+                <option value="HCMC">Hồ Chí Minh</option>
+            </select>
+        </label>
+        <label>
+            <select id="district">
+                <option value="">Chọn huyện/quận</option>
+            </select>
+        </label>
+
         <label><input type="text" id="email" placeholder="email"/></label>
         <label><input type="text" id="class" placeholder="lớp"/></label>
         <label><input type="text" id="course" placeholder="khóa học" /></label>
         <button onclick="addStudent()" id="addBtn" class="btn">Thêm</button>
         <button onclick="saveStudent()" id="saveBtn" class="btn" style="display: none;">Lưu</button>
     </div>
+
     <section class="container">
         <div class="container_box">
             <table id="students-table">
@@ -83,12 +108,16 @@
             </table>
         </div>
         <footer>
-            <button class="btn_footer">1</button>
+            <div id="pagination" class="pagination-container"></div>
 
         </footer>
     </section>
 </main>
 <script src="data.js"></script>
 <script src="app.js"></script>
+<script src="./addStudents.js"></script>
+<script src="./edit.js"></script>
+<script src="./find.js"></script>
+<script src="client.js"></script>
 </body>
 </html>
